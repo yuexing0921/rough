@@ -101,48 +101,56 @@ export class RoughCanvas {
     return d;
   }
 
+  // 矩形
   rectangle(x: number, y: number, width: number, height: number, options?: Options): Drawable {
     const d = this.gen.rectangle(x, y, width, height, options);
     this.draw(d);
     return d;
   }
 
+  // 椭圆
   ellipse(x: number, y: number, width: number, height: number, options?: Options): Drawable {
     const d = this.gen.ellipse(x, y, width, height, options);
     this.draw(d);
     return d;
   }
 
+  // 圆
   circle(x: number, y: number, diameter: number, options?: Options): Drawable {
     const d = this.gen.circle(x, y, diameter, options);
     this.draw(d);
     return d;
   }
 
+  // 直线
   linearPath(points: Point[], options?: Options): Drawable {
     const d = this.gen.linearPath(points, options);
     this.draw(d);
     return d;
   }
 
+  // 多角形物体
   polygon(points: Point[], options?: Options): Drawable {
     const d = this.gen.polygon(points, options);
     this.draw(d);
     return d;
   }
 
+  // 弧
   arc(x: number, y: number, width: number, height: number, start: number, stop: number, closed: boolean = false, options?: Options): Drawable {
     const d = this.gen.arc(x, y, width, height, start, stop, closed, options);
     this.draw(d);
     return d;
   }
 
+  // 曲线
   curve(points: Point[], options?: Options): Drawable {
     const d = this.gen.curve(points, options);
     this.draw(d);
     return d;
   }
 
+  // 路径
   path(d: string, options?: Options): Drawable {
     const drawing = this.gen.path(d, options);
     this.draw(drawing);
